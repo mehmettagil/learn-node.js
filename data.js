@@ -1,6 +1,6 @@
  module.exports = [
     {
-      il: 'Edirme',
+      il: 'Edirne',
       ilce: "Kesan",
       eczane: ["selin"],
     },

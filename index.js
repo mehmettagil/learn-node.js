@@ -26,6 +26,16 @@ server.get('/',(request,response)=>{
 });
 server.get('/eczaneler',(request,response)=>{
     response.status(200).json(data)
+});
+server.get('/eczaneler:il',(request,response)=>{
+    const {il} =request.params;
+    const eczane = data.find((eczane)=>eczane.il === il);
+    if (eczane) {
+        response.status(200).json(eczane);
+        
+    }else{
+        response.status(404).send('Bulunamadı');
+    }
 })
 server.listen(3000,()=>{
     console.log('http://localhost:3000 mesaj geldi') }
